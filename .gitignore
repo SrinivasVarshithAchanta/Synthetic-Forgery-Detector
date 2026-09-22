@@ -1,0 +1,20 @@
+# Data (regenerate with scripts/build_dataset.py)
+data/
+# Training artifacts
+runs/
+checkpoints/
+wandb/
+scratch/
+# Reports figures are committed selectively; raw error dumps are not
+reports/hard_cases/
+reports/*.csv
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+# Env
+.venv/
+venv/
+# Local workspace metadata
+.freebuff/

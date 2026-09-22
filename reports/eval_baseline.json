@@ -1,0 +1,170 @@
+{
+  "checkpoint": "runs/baseline-ce/best.pt",
+  "model": "resnet50",
+  "img_size": 224,
+  "threshold": 0.5399999999999999,
+  "amp": true,
+  "hard_types": [
+    "copy_move",
+    "jpeg_recompression",
+    "resampling",
+    "splicing"
+  ],
+  "slices": {
+    "clean": {
+      "accuracy": 0.9044444444444445,
+      "precision": 0.9619289340101523,
+      "recall": 0.8422222222222222,
+      "f1": 0.8981042654028436,
+      "far": 0.15777777777777777,
+      "frr": 0.03333333333333333,
+      "threshold": 0.5399999999999999,
+      "n": 900,
+      "n_genuine": 450,
+      "n_tampered": 450,
+      "tn": 435,
+      "fp": 15,
+      "fn": 71,
+      "tp": 379,
+      "auroc": 0.9636123456790124,
+      "auprc": 0.9713438488041197
+    },
+    "noisy": {
+      "accuracy": 0.8222222222222222,
+      "precision": 0.9503105590062112,
+      "recall": 0.68,
+      "f1": 0.7927461139896373,
+      "far": 0.32,
+      "frr": 0.035555555555555556,
+      "threshold": 0.5399999999999999,
+      "n": 900,
+      "n_genuine": 450,
+      "n_tampered": 450,
+      "tn": 434,
+      "fp": 16,
+      "fn": 144,
+      "tp": 306,
+      "auroc": 0.9107333333333334,
+      "auprc": 0.9293025188082523
+    },
+    "adversarial": {
+      "accuracy": 0.9174603174603174,
+      "precision": 0.9050632911392406,
+      "recall": 0.7944444444444444,
+      "f1": 0.8461538461538461,
+      "far": 0.20555555555555555,
+      "frr": 0.03333333333333333,
+      "threshold": 0.5399999999999999,
+      "n": 630,
+      "n_genuine": 450,
+      "n_tampered": 180,
+      "tn": 435,
+      "fp": 15,
+      "fn": 37,
+      "tp": 143,
+      "auroc": 0.953395061728395,
+      "auprc": 0.9291785323763484
+    }
+  },
+  "far_by_bucket": [
+    {
+      "forgery_type": "copy_move",
+      "difficulty": "subtle",
+      "n": 44,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9968951940536499
+    },
+    {
+      "forgery_type": "copy_move",
+      "difficulty": "moderate",
+      "n": 41,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9999374747276306
+    },
+    {
+      "forgery_type": "copy_move",
+      "difficulty": "aggressive",
+      "n": 28,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9999669790267944
+    },
+    {
+      "forgery_type": "splicing",
+      "difficulty": "subtle",
+      "n": 55,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9992023706436157
+    },
+    {
+      "forgery_type": "splicing",
+      "difficulty": "moderate",
+      "n": 30,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9997006058692932
+    },
+    {
+      "forgery_type": "splicing",
+      "difficulty": "aggressive",
+      "n": 28,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9999843239784241
+    },
+    {
+      "forgery_type": "resampling",
+      "difficulty": "subtle",
+      "n": 37,
+      "missed": 24,
+      "far": 0.6486486486486487,
+      "mean_p_tampered": 0.41766634583473206
+    },
+    {
+      "forgery_type": "resampling",
+      "difficulty": "moderate",
+      "n": 38,
+      "missed": 20,
+      "far": 0.5263157894736842,
+      "mean_p_tampered": 0.4849851429462433
+    },
+    {
+      "forgery_type": "resampling",
+      "difficulty": "aggressive",
+      "n": 37,
+      "missed": 14,
+      "far": 0.3783783783783784,
+      "mean_p_tampered": 0.6041542887687683
+    },
+    {
+      "forgery_type": "jpeg_recompression",
+      "difficulty": "subtle",
+      "n": 44,
+      "missed": 13,
+      "far": 0.29545454545454547,
+      "mean_p_tampered": 0.7356186509132385
+    },
+    {
+      "forgery_type": "jpeg_recompression",
+      "difficulty": "moderate",
+      "n": 43,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9713200330734253
+    },
+    {
+      "forgery_type": "jpeg_recompression",
+      "difficulty": "aggressive",
+      "n": 25,
+      "missed": 0,
+      "far": 0.0,
+      "mean_p_tampered": 0.9997392296791077
+    }
+  ],
+  "far_subtle": 0.20555555555555555,
+  "far_aggressive": 0.11864406779661017,
+  "overall_test_accuracy": 0.9044444444444445
+}
